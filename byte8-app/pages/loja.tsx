@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import NavBar from "../src/app/components/navbar"
-import Footer from "../src/app/components/footer"
-import styles from "../src/app/styles/store.module.css"
+import NavBar from "@/app/components/navbar";
+import Footer from "@/app/components/footer";
+import styles from "@/app/styles/store.module.css"
 import env from "../env.js"
 import axios from "axios";
 import { useRouter } from "next/router.js";
