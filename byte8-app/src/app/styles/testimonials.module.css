@@ -1,0 +1,145 @@
+
+.testimonialsSection {
+  padding: 6rem 2rem;
+  background: linear-gradient(to bottom, #181818, #050505);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.abstractForm {
+  position: absolute;
+  z-index: 1;
+  height: 60rem;
+  width: 60rem;
+  opacity: 0.2;
+  right: 45rem;
+  filter: blur(3px);
+}
+
+.abstractForm2 {
+  position: absolute;
+  z-index: 1;
+  height: 50rem;
+  width: 50rem;
+  opacity: 0.3;
+  left: 40rem;
+  filter: blur(3px);
+  bottom: 25rem;
+}
+
+.headingP {
+  font-size: var(--text-small);
+  text-transform: uppercase;
+  color: var(--gray-dark);
+  font-family: 'Geist-Medium';
+  position: relative;
+  z-index: 2;
+}
+
+.headingH1 {
+  font-size: 2.3rem;
+  margin-bottom: 4rem;
+  font-family: 'Plain-Bold';
+  background: linear-gradient(to right, #ffffff, #9c9c9c);
+  background-clip: text;
+  color: transparent;  
+  position: relative;
+  z-index: 2;
+}
+
+.testimonialsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem 2rem;
+  max-width: 70rem;
+}
+
+.testimonialCard {
+  background-color: #202020;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 300px;
+  text-align: left;
+  height: 15rem;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonialCard img {
+  position: relative;
+  bottom: 4rem;
+  left: 5rem;
+}
+
+.feedback {
+  position: relative;
+  font-style: italic;
+  color: var(--gray-light);
+  bottom: 3rem;
+}
+
+.name {
+  position: relative;
+  bottom: 3rem;
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-size: var(--text-small);
+  font-family: 'Geist-Medium' !important;
+  color: var(--principal-color);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 900px) {
+  .abstractForm {
+    right: 20rem;
+  }
+
+  .abstractForm2 {
+    left: 20rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .headingH1 {
+    font-size: 1.9rem;
+  }
+
+  .abstractForm {
+    right: 0rem;
+  }
+
+  .abstractForm2 {
+    left: 5rem;
+    bottom: 5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .headingH1 {
+    font-size: 1.8rem;
+  }
+
+  .feedback {
+    font-size: 0.9rem;
+  }
+
+  .testimonialCard img {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .testimonialCard {
+    height: 13rem;
+  }
+
+  .testimonialsSection {
+    padding: 6rem 1rem;
+  }
+}

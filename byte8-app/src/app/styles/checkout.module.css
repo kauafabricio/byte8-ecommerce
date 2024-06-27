@@ -1,0 +1,779 @@
+.Off {
+  display: none;
+}
+
+@keyframes showInterface {
+  from {
+    margin-left: 10rem;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+.checkoutMain {
+  display: flex;
+  height: auto;
+  padding: 5rem 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkoutContainer {
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.checkoutBag {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+
+.paragraphBag, .paymentSummary h1, .paymentMethod h1{
+  color: var(--gray-dark);
+  text-transform: uppercase;
+  font-size: var(--text-normal);
+  font-family: 'Geist-Medium' !important;
+  letter-spacing: 1px;
+}
+
+.checkoutIndividualProduct {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+  gap: 0.7rem;
+  border: 0.5px solid rgb(255, 255, 255, 0.2);
+  border-radius: 7px;
+}
+
+.individualProductInfo {
+  display: flex;
+  gap: 0.5rem;
+  width: 18rem;
+}
+
+.individualProductInfo img {
+  height: 3.5rem;
+}
+
+
+.individualProductInfoText p:first-child {
+  color: #ddd;
+  font-family: 'Geist-Medium';
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.individualProductInfoText p:last-child {
+  color: var(--gray-dark);
+  font-size: 0.8rem;
+}
+
+.checkoutCounter {
+  display: flex;
+  align-items: center;
+}
+
+.checkoutCounter button {
+  display: flex;
+  border: none;
+  height: fit-content;
+  background: transparent;
+  color: #ddd;
+  padding: 0.1rem 0.2rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.checkoutCounter p {
+  border: 1px solid rgb(255, 255, 255, 0.5);
+  border-radius: 7px;
+  font-size: 0.85rem;
+  color: #ddd;
+  padding: 0.2rem 0.7rem;
+  margin-left: 0.5rem;
+}
+
+.checkoutIndividualProductPrice {
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+.checkoutIndividualProduct button svg {
+  height: 15px;
+  width: 15px;
+}
+
+.checkoutIndividualProduct button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  margin-left: 0.5rem;
+}
+
+/* ORDER SUMMARY */
+
+.checkoutOrderSummary {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  width: fit-content;
+  background-color: var(--black-principal);
+  border-radius: 10px;
+}
+
+.checkoutSummaryText {
+  color: var(--gray-dark);
+  text-transform: uppercase;
+  font-size: var(--text-normal);
+  font-family: 'Geist-Medium' !important;
+  letter-spacing: 1px;
+}
+
+.checkoutOrderSummary form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 20rem;
+  margin-top: 1rem;
+}
+
+.checkoutOrderSummary form p {
+  font-size: var(--text-normal);
+  color: var(--principal-color);
+  font-family: 'Geist-Medium';
+}
+
+.checkoutOrderSummary form input {
+  border-radius: 7px;
+  width: 100%;
+  padding: 0.5rem 0rem;
+  font-size: var(--text-small);
+}
+
+.checkoutOrderSummary form input:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+.checkoutOrderSummary form label {
+  padding: 0.1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 7px;
+}
+
+.checkoutOrderSummary form label button {
+  padding: 0rem 0.5rem;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: transparent;
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  line-height: 0px;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.checkoutOrderSummary form label button:hover {
+  background-color: #ebebeb;
+}
+
+.checkoutSubTotal {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.checkoutSubTotal p, .checkoutTotal p{
+  color: var(--principal-color);
+  font-size: var(--text-normal);
+}
+
+.checkoutCupom, .checkoutTotal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkoutCupom p {
+  color: var(--gray-dark);
+  font-size: 0.9rem;
+}
+
+.checkoutButton {
+  padding: 0.8rem;
+  font-size: var(--text-small);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 7px;
+  border: none;
+  background-color: black;
+  color: var(--principal-color);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.checkoutButton:hover {
+  background-color: #070707;
+}
+
+
+/* STEPS CONTAINER */
+
+.stepsInterface {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.stepBreadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 3rem;
+  width: 100%;
+}
+
+.lineBreadcrumb {
+  width: 150px;
+}
+
+.lowOpacity {
+  opacity: 0.2;
+}
+
+.steps {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.stepsIcon {
+  padding: 0.5rem;
+  background-color: rgb(16, 16, 16,0.5);
+  box-sizing: content-box;
+  border-radius: 15px;
+}
+
+.steps p {
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.steps p:first-child {
+  font-family: 'Geist-Medium';
+  color: var(--principal-color);
+}
+.steps p:last-child {
+  color: var(--gray-dark);
+}
+
+.stepsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* ADDRESS INTERFACE */
+
+.addressInterface {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+  animation: showInterface 0.5s ease;
+}
+
+.addressInterface h1:first-of-type, .shippingInterface h1 {
+  color: var(--principal-color);
+  font-size: var(--text-medium);
+}
+
+.addressInterface p {
+  color: var(--gray-dark);
+}
+
+.userAddress {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.userAddress button {
+  background-color: black;
+  color: var(--principal-color);
+  display: flex;
+  align-items: center;
+  padding: 0.4rem 0.6rem;
+  border: none;
+  border-radius: 5px;
+  gap: 0.3rem;
+  width: fit-content;
+  cursor: pointer;
+  font-size: var(--text-small);
+}
+
+.divAddress {
+  display: flex;
+  gap: 1rem;
+  background-color: var(--black-principal);
+  padding: 1.5rem;
+  border-radius: 7px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.divAddress section {
+  display: flex;
+  gap: 1rem;
+}
+
+.divAddress div p {
+  background-color: black;
+  padding: 0.3rem 0.5rem;
+  color: var(--principal-color);
+  text-transform: uppercase;
+  font-size: var(--text-button);
+  width: fit-content;
+  border-radius: 7px;
+}
+
+.divAddress div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.divAddress label {
+  color: var(--gray-dark);
+}
+
+.divAddress button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+}
+
+.buttonNextAndBack {
+  display: flex;
+  gap: 0.5rem;
+  align-self: end;
+  margin-top: 1rem;
+}
+
+.buttonNextAndBack button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  width: fit-content;
+  cursor: pointer;
+  font-size: var(--text-button);
+  text-transform: uppercase;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  line-height: 0rem;
+}
+
+.buttonNextAndBack button:last-child {
+  background-color: black;
+  color: var(--principal-color);
+}
+
+/* FORM ADDRESS */
+
+@keyframes showForm {
+  from {
+    margin-left: 10rem;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0rem;
+    opacity: 1;
+  }
+}
+
+.formAddressMain {
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+}
+
+.formAddressContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #101010;
+  padding: 1.5rem 2rem;
+  border-radius: 7px;
+  height: fit-content;
+  width: fit-content;
+  gap: 1rem;
+  animation: showForm 0.5s ease;
+}
+
+.formAddressContainer h1 {
+  color: var(--gray-dark);
+  font-size: var(--text-normal);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.formAddressContainer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formAddressContainer form button {
+  padding: 0.4rem 0.6rem;
+  margin-top: 1.5rem;
+  font-size: var(--text-small);
+  border-radius: 7px;
+  background-color: black;
+  color: var(--principal-color);
+  border: none;
+  width: fit-content;
+  align-self: end;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  line-height: 0rem;
+}
+
+.formAddressContainer form label {
+  color: var(--principal-color);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin: 0.3rem 0rem;
+}
+
+.formAddressContainer form section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.formAddressContainer form section div {
+  display: flex;
+  flex-direction: column;
+}
+
+.formAddressContainer form input {
+  padding: 0.4rem 0.5rem;
+  font-size: var(--text-small);
+  background-color: white;
+  line-height: 1rem;
+  border-radius: 5px;
+}
+
+.formAddressHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formAddressHeader button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* SHIPPING INTERFACE */
+
+.shippingInterface {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: showInterface 0.5s ease;
+}
+
+.freeShipping {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgb(255, 255, 255, 0.3);
+  border-radius: 7px;
+  padding: 1rem 1.5rem;
+}
+
+.freeShipping p:last-of-type {
+  color: var(--principal-color);
+}
+
+.freeShippingInfo {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.freeShippingInfo p {
+  font-size: var(--text-small);
+  color: var(--gray-dark);
+  text-transform: uppercase;
+}
+
+.freeShippingInfo div {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.freeShippingInfo div p {
+  color: var(--gray-dark) !important;
+}
+
+/* PAYMENT INTERFACE */
+
+.paymentSummary, .paymentMethod {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid rgb(255, 255, 255, 0.3);
+  border-radius: 7px;
+  padding: 1.5rem;
+  width: fit-content;
+  height: fit-content;
+}
+
+.paymentInterface {
+  display: flex;
+  gap: 2rem;
+  width: 55rem;
+  animation: showInterface 0.5s ease-in-out;
+}
+
+.paymentSummaryItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.paymentSummaryItem {
+  display: flex;
+  background-color: #070707;
+  align-items: center;
+  padding: 0.3rem 1rem;
+  border-radius: 7px;
+  width: 27rem;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.paymentSummaryItem p {
+  color: var(--principal-color);
+  font-size: 0.85rem;
+}
+
+.paymentSummaryItemsProductInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.paymentSummaryItemsProductInfo img {
+  height: 2.5rem;
+}
+
+.paymentSummaryItemsProductInfo p {
+  color: var(--gray-dark);
+}
+
+.paymentSummaryAddress, .paymentSummaryShipping {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.paymentSummaryAddress p:first-child, .paymentSummaryShipping p:first-child, .paymentSummarySubTotal p:first-child, .paymentSummaryTotal p:first-child{
+  color: var(--gray-dark);
+  font-size: 0.9rem;
+  font-family: 'Geist-Medium';
+}
+
+.paymentSummaryCupom p:first-child {
+  color: rgb(171, 171, 206);
+  font-size: 0.85rem;
+  font-family: 'Geist-Medium';
+}
+
+.paymentSummaryAddress p:last-child, .paymentSummaryShipping p:last-child, .paymentSummarySubTotal p:last-child, .paymentSummaryCupom p:last-child, .paymentSummaryTotal p:last-child{
+  color: var(--principal-color);
+  font-size: 0.85rem;
+}
+
+.paymentSummarySubTotal, .paymentSummaryTotal, .paymentSummaryCupom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* PAYMENT METHOD */
+
+
+.paymentMethod button {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--principal-color);
+  color: var(--principal-color);
+  font-size: var(--text-small);
+  width: fit-content;
+  margin: 0.5rem 0rem;
+  cursor: pointer;
+}
+
+.paymentMethod form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.paymentMethod form input {
+  padding: 0.5rem 0.7rem;
+  font-size: var(--text-small);
+  line-height: 1rem;
+  border-radius: 5px;
+  color: var(--principal-color);
+  background-color: transparent;
+  border: 1px solid rgb(255, 255, 255, 0.3);
+}
+
+.paymentMethod form div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* MIDIA QUERIES */
+
+@media (max-width: 980px) {
+  .checkoutContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .paymentInterface {
+    width: fit-content;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .paymentInterface {
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 780px) {
+  .lineBreadcrumb {
+    width: 50px;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .formAddressContainer, .shippingInterface, .addressInterface, .paymentInterface {
+    animation: fadeIn 1s ease;
+  }
+}
+
+@media (max-width: 580px) {
+  .lineBreadcrumb {
+    display: none;
+  }
+  .stepBreadcrumb {
+    gap: 1.5rem;
+  }
+
+}
+
+@media (max-width: 530px) {
+  .paymentInterface {
+    width: 100%;
+  }
+  .paymentSummaryItem {
+    width: 100%;
+  }
+  .individualProductInfo {
+    width: 10rem;
+    flex-direction: column;
+  }
+  
+  .individualProductInfo img {
+    height: 7rem;
+    width: 7rem;
+    align-self: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .paymentMethod, .paymentSummary {
+    width: 100%;
+  }
+  .freeShipping {
+    gap: 0.5rem;
+  }
+  .freeShipping p:last-of-type {
+    font-size: 0.8rem;
+  }
+  .freeShippingInfo {
+    gap: 0.5rem;
+  }
+  .stepBreadcrumb {
+    flex-direction: column;
+    margin-bottom: 5rem;
+  }
+  .checkoutMain {
+    padding: 5rem 0.5rem;
+  }
+  .individualProductInfo {
+    width: fit-content;
+  }
+  .checkoutIndividualProduct {
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+  }
+
+  .checkoutOrderSummary {
+    width: 100%;
+  }
+
+  .checkoutOrderSummary form {
+    width: 100%;
+  }
+}

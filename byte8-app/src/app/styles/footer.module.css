@@ -1,0 +1,87 @@
+
+
+/* FOOTER */
+
+.footer {
+  height: auto;
+  display: flex;
+  background-color: #080808;
+  padding: 5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+
+.contato {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.contato a {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-decoration: none;
+  color: var(--gray-light);
+  font-size: 0.9rem;
+}
+
+.footerMiniBox p, .footerMiniBox ul li a {
+  text-decoration: none;
+  color: var(--gray-light);
+  font-size: 0.9rem;
+}
+
+.footerMiniBox h1 {
+  font-size: var(--text-small);
+  text-transform: uppercase;
+  color: var(--principal-color);
+  letter-spacing: 0.5px;
+}
+
+.footerMiniBox picture {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.footerMiniBox ul {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.footerMiniBox ul li {
+  list-style: none;
+}
+
+.footerMiniBox {
+  height: 12rem;
+  padding: 1rem;
+}
+
+
+@media screen and (max-width: 860px) {
+  .footer {
+      flex-wrap: wrap;
+      height: auto;
+      padding: 3rem 1rem;
+      gap: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .footerMiniBox {
+    height: fit-content;
+    padding: 2rem 1rem;
+  }
+  .footerMiniBox ul {
+    padding: 0.5rem 1rem;
+  }
+}

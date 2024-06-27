@@ -1,0 +1,83 @@
+/* RESET */
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="color"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  background: none;
+  box-shadow: none;
+  width: auto;
+  color: inherit;
+  font: inherit; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Geist-Light';
+}
+
+
+/* REUTILIZÁVEIS */
+
+:root {
+  --principal-color: #ddd;
+  --background-global: #151515;
+  --gray-light: #bbbbbb;
+  --gray-dark: #808080;
+  --black-principal: #101010;
+  --text-extrabig: 2.5rem;
+  --text-big: 2rem;
+  --text-medium: 1.5rem;
+  --text-normal: 1rem;
+  --text-small: 0.8rem;
+  --text-button: 0.7rem;
+}
+
+body {
+  background-color: var(--background-global);
+}
+
+button {
+  font-size: var(--text-button);
+}
+
+h1 {
+  font-family: 'Geist-Bold' !important;
+}
+
+h2 {
+  font-family: 'Geist-Medium' !important;
+}
+
+@font-face {
+  font-family: 'Geist-Bold';
+  src: url(../../../public/fonts/Geist-Bold.otf);
+}
+
+@font-face {
+  font-family: 'Geist-Light';
+  src: url(../../../public/fonts/Geist-Light.otf);
+}
+
+@font-face {
+  font-family: 'Geist-Medium';
+  src: url(../../../public/fonts/Geist-Medium.otf);
+}

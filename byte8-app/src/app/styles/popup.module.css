@@ -1,0 +1,86 @@
+.successBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #444;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.successBar::before {
+  content: '';
+  display: block;
+  height: 100%;
+  background: #01c922;
+  animation: progress 5s linear;
+  border-radius: 10px;
+}
+
+.errorBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #777777;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.errorBar::before {
+  content: '';
+  display: block;
+  height: 100%;
+  background: #c00000;
+  animation: progress 5s linear;
+  border-radius: 10px;
+}
+
+@keyframes progress {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes showPopUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.popUpBox button svg {
+  height: 15px;
+  width: 15px;
+}
+
+.popUpBox button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.popUpBox {
+  margin: 0.5rem 0rem 0rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgb(241, 241, 241);
+  width: 20rem;
+  height: auto;
+  animation: showPopUp 0.5s ease;
+  position: fixed;
+  z-index: 100;
+}
+
+.popUpBox p {
+  color: #101010;
+  text-align: center;
+  font-size: 0.85rem;
+  font-family: 'Geist-Light';
+}

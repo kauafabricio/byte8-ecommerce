@@ -1,0 +1,420 @@
+/* REUTILIZÁVEIS */
+
+.btnLight {
+  background-color: #ddd;
+  transition: 0.5s ease;
+  color: #181818;
+}
+
+.btnLight:hover {
+  background-color: #919191;
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+  font-family: 'Geist-Light';
+  letter-spacing: 1px;
+  font-size: var(--text-small);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+
+.visible {
+  animation: showContent 1.5s ease;
+  opacity: 1;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+@keyframes showContent {
+  from {
+    opacity: 0;
+    margin-left: 2rem;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+
+/* FIRST SECTION */
+
+.firstSectionHome {
+  width: 100%;
+  height: 25rem;
+  z-index: 20;
+  background: linear-gradient(253deg, rgba(0,0,0, 0), rgba(0,0,0,0.5));
+  backdrop-filter: blur(100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 21;
+  flex-direction: column;
+  color: #ddd;
+  gap: 1rem;
+}
+
+.textHome a {
+  line-height: 0px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  font-size: var(--text-button);
+}
+
+.firstSectionHome h1 {
+  font-size: var(--text-extrabig);
+  text-align: center;
+  line-height: 2.5rem;
+  width: 470px;
+}
+
+.firstSectionHome h1 span {
+  color: var(--gray-light) !important;
+  font-family: 'Geist-Bold';
+}
+
+.firstSectionHome p {
+  text-align: center;
+}
+
+.firstSectionHome::before {
+    content: "";
+    background: url(../../../public/imgs/bg.png), linear-gradient(253deg, #000000, #181818, #272727);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: normal;
+    position: fixed;
+    z-index: 19;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+
+/* PRODUCTS SECTION HOME */
+
+.productsBoxHome {
+  height: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+
+.productsBoxHome div {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #181818, rgb(221, 221, 221, 0.1));
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  gap: 0.7rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.productsBoxHome div picture img {
+  height: 20rem;
+  width: 20rem;
+}
+
+.productsBoxHome div h1 {
+  color: var(--principal-color);
+  font-size: var(--text-big);
+  font-family: 'Geist-Medium' !important;
+  text-align: center;
+}
+
+.productsBoxHome div p {
+  color: var(--gray-light);
+  text-align: center;
+}
+
+.productsBoxHome div a {
+  line-height: 0px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-transform: uppercase;
+  font-size: var(--text-button);
+}
+
+/* HEADSET SECTION */
+
+.headsetSection {
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  height: fit-content;
+  width: 100%;
+  padding: 4rem 5rem;
+  display: flex;
+  background: url(../../../public/imgs/grainy-texture-background.jpg) rgb(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.headsetSection div {
+  position: relative;
+  z-index: 3;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.headsetSection div a {
+  line-height: 0px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  font-size: var(--text-button);
+}
+
+.headsetSection h1 {
+  font-size: var(--text-extrabig);
+  background: linear-gradient(to right, #ddd, #919191);
+  color: transparent;
+  background-clip: text;
+}
+
+.headsetSection p {
+  color: var(--principal-color);
+  text-align: center;
+  width: 320px;
+}
+
+.headsetSection picture {
+  background-color: rgb(221, 221, 221, 0.2);
+  backdrop-filter: blur(5px);
+  padding: 1.5rem;
+  border-radius: 50%;
+  position: relative;
+  z-index: 3;
+}
+
+/* CALL CLIENT */
+
+.callClient {
+  height: fit-content;
+  display: flex;
+  width: 100%;
+  padding: 5rem 2rem;
+  background: url(../../../public/imgs/black-background.jpg) rgb(0,0,0,0.4);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+}
+
+.callClientMain {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.callClientMain a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #101010;
+  background-color: #ddd;
+  gap: 0.5rem;
+  border-radius: 10px;
+  padding: 0.7rem 1.5rem;
+  font-size: var(--text-button);
+  text-transform: uppercase;
+}
+
+.callClientMain a:hover {
+  background-color: rgb(170, 170, 192);
+}
+
+.callClientMain h1 {
+  color: transparent;
+  background: linear-gradient(to right, rgb(255, 255, 255), #ddd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: var(--text-extrabig);
+  width: 40rem;
+  text-align: center;
+  font-family: 'Geist-Bold';
+}
+
+.callClientMain span {
+  color: var(--gray-dark);
+  font-family: 'Geist-Bold';
+}
+
+.callClientIcons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: fit-content;
+  align-self: center;
+}
+
+.callClientIcon {
+  display: flex;
+  gap: 0.7rem;
+  background-color: var(--gray-light);
+  width: 15rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-around;
+  transition: 0.5s ease;
+}
+
+.callClientIcon:hover {
+  transform: scale(1.05);
+}
+
+.callClientIcon div {
+  display: flex;
+  flex-direction: column;
+}
+
+.callClientIcon div p {
+  color: var(--black-principal);
+  font-size: 0.75rem;
+}
+
+.callClientIcon div p:first-child {
+  font-family: 'Geist-Medium';
+  color: var(--black-principal);
+}
+
+@media screen and (max-width: 850px) {
+  .productsBoxHome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 680px) {
+  .callClientMain h1 {
+    font-size: 2rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 580px) {
+  .firstSectionHome h1 {
+    font-size: 2.2rem;
+    width: 100%;
+    padding: 0rem 3rem;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .firstSectionHome h1 {
+    width: 420px;
+  }
+
+  .callClientMain h1 {
+    width: 420px;
+  }
+}
+
+@media (max-width: 419px) {
+  .firstSectionHome h1 {
+    width: 360px;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+  }
+
+  .textHome {
+    gap: 0.8rem;
+  }
+
+  .productsBoxHome div picture img {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .productsBoxHome div h1 {
+    font-size: 1.7rem;
+  }
+
+  .headsetSection h1 {
+    font-size: 2rem;
+  }
+
+  .headsetSection picture img {
+    height: 15rem;
+    width: 15rem;
+  }
+
+  .callClientMain h1 {
+    width: 360px;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .firstSectionHome h1 {
+    width: 330px;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+  }
+
+  .firstSectionHome p {
+    font-size: var(--text-small);
+  }
+
+  .btn {
+    padding: 0.4rem 1rem;
+    font-family: 'Geist-Light';
+    letter-spacing: 1px;
+    font-size: var(--text-small);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+
+  .callClientMain h1 {
+    width: 330px;
+    font-size: 1.6rem;
+  }
+
+  .productsBoxHome {
+    padding: 4rem 0.5rem;
+  }
+
+}

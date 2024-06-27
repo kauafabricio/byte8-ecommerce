@@ -1,0 +1,353 @@
+.navBar {
+  height: 3rem;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(24, 24, 24);
+  box-sizing: border-box;
+}
+
+.spaceNav {
+  height: 3rem;
+  width: 100%;
+  background-color: rgb(24, 24, 24);
+  box-sizing: border-box;
+}
+
+.btnLight {
+  background-color: #ddd;
+  transition: 0.5s ease;
+  color: #181818;
+}
+
+.btnLight:hover {
+  background-color: #919191;
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+  font-family: 'Geist-Light';
+  letter-spacing: 1px;
+  font-size: 0.80rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* MENU MOBILE */
+
+.menuIcon {
+  display: none;
+}
+
+@keyframes showMenu {
+  from {
+    height: 0%;
+    opacity: 0;
+  }
+  to {
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+.menu {
+  background-color: #070707;
+  position: fixed;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 7rem 0rem;
+  animation: showMenu 0.7s ease;
+}
+
+.menuOptions ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  list-style: none;
+  align-items: center;
+}
+
+.menuOptions ul li a {
+  text-decoration: none;
+  color: var(--principal-color);
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-family: 'Geist-Medium';
+  letter-spacing: 0.5px;
+}
+
+/* FLYOUT */
+
+.flyoutBox {
+  height: auto;
+  width: fit-content;
+  background-color: rgba(19, 19, 19);
+  position: fixed;
+  z-index: 100;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  margin-right: 8.5rem;
+  border-radius: 10px;
+  padding: 0rem 1rem;
+}
+
+
+.bagNoLogged {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.userFlyout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 12rem;
+  height: 100%;
+  padding: 2rem 1.5rem;
+  box-sizing: content-box;
+}
+
+.bagNoLogged h1 {
+  color: #ddd;
+  font-family: 'Geist-Light' !important;
+  font-size: 1.1rem;
+}
+
+.bagNoLogged p {
+  color: #757575;
+  font-size: 0.75rem;
+  text-align: center;
+  width: 15rem;
+}
+
+.bagNoLogged p a {
+  color: rgb(107, 107, 228);
+}
+
+.userOptionsFlyout {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.userFlyout h1 {
+  font-size: 1rem;
+  font-family: 'Geist-Light' !important;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.userOptionsFlyout div, .userOptionsFlyout a {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  border: 1px solid rgb(255, 255, 255,0.2);
+  border-radius: 7px;
+  padding: 0.2rem 0.5rem;
+}
+
+.userOptionsFlyout a {
+  color: var(--principal-color);
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+
+.userOptionsFlyout div button {
+  background: transparent;
+  color: var(--principal-color);
+  font-size: 0.75rem;
+  border: none;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.Off {
+  display: none;
+}
+
+/* NAV OPTIONS */
+
+.navOption ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navOption ul li {
+  align-items: center;
+  display: flex;
+}
+
+.navOption ul li a {
+  text-decoration: none;
+  color: #ddd;
+  text-transform: uppercase;
+  font-size: 0.70rem;
+  transition: 0.5s ease;
+}
+
+.navOption ul li a:hover {
+  color: #c7c7c7;
+}
+
+/* NAV ICONS */
+
+.navIcons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.navIcons button {
+  background: transparent;
+  line-height: 0rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* BAG */
+
+.bag {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.bagContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.bagContainer h1 {
+  background: linear-gradient(to right, #ececec, #777777);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: var(--text-normal);
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.bagContainer a {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: var(--text-button);
+  line-height: 0rem;
+  text-decoration: none;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  width: fit-content;
+  align-self: center;
+  background-color: var(--principal-color);
+  padding: 0.3rem 1.2rem;
+  border-radius: 15px;
+  color: var(--black-principal);
+  margin-bottom: 1rem;
+}
+
+.productInBag button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  margin-left: 0.5rem;
+}
+
+.bagContainer:last-child {
+  margin-bottom: 1rem;
+}
+
+.productInBag {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  width: 18rem;
+}
+
+.productInfo {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.productInfo img {
+  height: 3rem;
+  width: 3rem;
+}
+
+.productInfo div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.productInfo div p {
+  color: #DDD;
+  font-size: 0.8rem;
+}
+
+.productInfo div p:nth-child(1) {
+  font-family: 'Geist-Medium';
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 900px) {
+  .flyoutBox {
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .flyoutBox {
+    margin-right: 0.5rem;
+  }
+  .menuIcon {
+    display: inline;
+  }
+
+  .navOption {
+    display: none;
+  }
+  .navBar {
+    justify-content: space-between;
+    padding: 0rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menuOptions ul li a {
+    font-size: 1.3rem;
+  }
+}
