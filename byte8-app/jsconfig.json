@@ -2,7 +2,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/app/*": ["src/app/*"]
+      "@/*": ["./*"],
+      "@/app/*": ["src/app/*"],
+      "@/components/*": ["src/app/components/*"],
+      "@/styles/*": ["src/app/styles/*"]
     }
-  }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }
