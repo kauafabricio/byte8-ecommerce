@@ -8,6 +8,7 @@ import axios from "axios";
 import Footer from "@/app/components/footer";
 import { format } from "date-fns"
 import Link from "next/link";
+import Head from "next/head";
 
 const Orders = () => {
   const { userId, isLogged, userOrders } = useAuth()
@@ -47,6 +48,9 @@ const Orders = () => {
 
   return(
     <>
+      <Head>
+        <title>Byte8 | Meus pedidos</title>
+      </Head>
       <NavBar />
       { userId && isLogged && (
         <div className={styles.ordersMain}>

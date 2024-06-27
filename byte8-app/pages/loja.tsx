@@ -5,6 +5,7 @@ import styles from "@/app/styles/store.module.css"
 import env from "../env.js"
 import axios from "axios";
 import { useRouter } from "next/router.js";
+import Head from "next/head.js";
 
 interface Product {
   _id: string;
@@ -88,6 +89,10 @@ const Loja = () => {
   
   return(
     <>
+      <Head>
+        <title>Byte8 | Loja</title>
+      </Head>
+
       <NavBar />
 
       {/* MAIN PRODUCTS */}

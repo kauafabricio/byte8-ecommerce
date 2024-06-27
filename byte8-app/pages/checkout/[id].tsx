@@ -14,6 +14,7 @@ import PopUp from "@/app/components/popup";
 // IMAGES IMPORTS
 
 import creditCard from "../../public/imgs/credit-card.png"
+import Head from "next/head";
 
 export default function Checkout() {
 
@@ -384,6 +385,9 @@ export default function Checkout() {
 
   return(
     <>
+      <Head>
+        <title>Byte8 | Finalizar pedido</title>
+      </Head>
       <NavBar />
       { showPopUp && <PopUp text={textPopUp} onClose={() => setShowPopUp(false)} status={popUpStatus} /> };
       { formAddress && (

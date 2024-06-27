@@ -5,6 +5,7 @@ import axios from "axios";
 import env from "../env";
 import Cookies from "js-cookie"
 import PopUp from "@/app/components/popup";
+import Head from "next/head";
 
 export default function Login() {
 
@@ -132,6 +133,10 @@ export default function Login() {
 
   return(
     <>
+      <Head>
+        <title>Byte8 | Login</title>
+      </Head>
+
       <NavBar />
       { showPopUp && <PopUp text={textPopUp} onClose={() => setShowPopUp(false)} status={popUpStatus} /> };
       <main className={styles.loginMain}>

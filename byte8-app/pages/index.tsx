@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Image, { StaticImageData } from "next/image";
 import styles from '@/app/styles/homepage.module.css'
 import env from "../env.js"
+import Head from "next/head.js";
 
 // IMAGES IMPORTS
 import smartwatchPng from "../public/imgs/byte8-smartwatch8pro-black.png";
@@ -89,8 +90,11 @@ export default function HomePage() {
   return (
     <>
 
-      {/* NAV BAR */}
+      <Head>
+        <title>Byte8 | Transforme sua experiência tecnológica</title>
+      </Head>
 
+      {/* NAV BAR */}
       <NavBar />
 
       {/* HOME CONTENT */}
