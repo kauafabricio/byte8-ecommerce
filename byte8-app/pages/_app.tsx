@@ -1,4 +1,4 @@
-import '@/app/styles/globals.css';
+import '../src/app/styles/globals.css'
 import { AuthProvider } from '../context/AuthContext';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';

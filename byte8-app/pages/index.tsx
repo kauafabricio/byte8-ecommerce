@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image, { StaticImageData } from "next/image";
-import styles from '@/app/styles/homepage.module.css'
+import styles from "../src/app/styles/homepage.module.css"
 import env from "../env.js"
 import Head from "next/head.js";
 
@@ -15,9 +15,9 @@ import cardDeliveryIcon from "../public/imgs/card-delivery.png"
 import starCheckIcon from "../public/imgs/star-check.png"
 
 // COMPONENTS IMPORTS
-import Footer from "@/app/components/footer";
-import TestimonialsSection from "@/app/components/testimonials";
-import NavBar from "@/app/components/navbar";
+import Footer from "../src/app/components/footer";
+import TestimonialsSection from "../src/app/components/testimonials";
+import NavBar from "../src/app/components/navbar"
 
 interface ImagesProps {
   src: StaticImageData;

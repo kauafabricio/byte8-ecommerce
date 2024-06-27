@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Image from "next/image";
-import styles from "@/app/styles/navbar.module.css"
+import styles from "../styles/navbar.module.css"
 import logo from "../../../public/imgs/logo.png"
 import env from "../../../env";
 import { useAuth } from "../../../context/AuthContext";

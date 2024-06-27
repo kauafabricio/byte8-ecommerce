@@ -1,10 +1,10 @@
-import NavBar from "@/app/components/navbar";
+import NavBar from "../src/app/components/navbar"
 import React, { useState, useEffect } from "react";
-import styles from "@/app/styles/login.module.css"
+import styles from "../src/app/styles/login.module.css"
 import axios from "axios";
 import env from "../env";
 import Cookies from "js-cookie"
-import PopUp from "@/app/components/popup";
+import PopUp from "../src/app/components/popup";
 import Head from "next/head";
 
 export default function Login() {

@@ -1,11 +1,11 @@
-import NavBar from "@/app/components/navbar";
+import NavBar from "../src/app/components/navbar";
 import { useAuth } from "../context/AuthContext";
-import styles from "@/app/styles/orders.module.css"
+import styles from "../src/app/styles/orders.module.css"
 import { useEffect } from "react";
 import env from "../env";
 import Cookies from "js-cookie";
 import axios from "axios";
-import Footer from "@/app/components/footer";
+import Footer from "../src/app/components/footer"
 import { format } from "date-fns"
 import Link from "next/link";
 import Head from "next/head";
