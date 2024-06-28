@@ -44,23 +44,23 @@ Este projeto é um e-commerce desenvolvido para a empresa fictícia Byte8, utili
   - **/routes**: Rotas da API  
  
 ## API's do Projeto
-**Autenticação do Usuário**   
+- **Autenticação do Usuário**   
   **POST /register**: API para registrar uma nova conta de usuário no e-commerce.  
   **POST /login**: API para realizar login de usuário no e-commerce.  
-  **GET /auth**: API para verificar a autenticação do usuário utilizando token JWT.  
-**Produtos**   
+  **GET /auth**: API para verificar a autenticação do usuário utilizando token JWT.    
+- **Produtos**   
   **GET /api/products**: API para acessar todos os produtos disponíveis no e-commerce.  
-**Sacola de Desejos**  
+- **Sacola de Desejos**  
   **POST /api/save-product**: API para adicionar um novo produto na Sacola de Desejos do usuário.  
   **DELETE /api/delete-product**: API para excluir produto da Sacola de Desejos do usuário.  
   **GET /api/get-bag**:  API para obter a sacola de desejos atual do usuário.  
-  **PUT /api/refresh-bag**: API para atualizar a quantidade do produto na Sacola de Desejos do usuário.  
-**Cupons**    
+  **PUT /api/refresh-bag**: API para atualizar a quantidade do produto na Sacola de Desejos do usuário.   
+- **Cupons**    
   **POST /api/cupom**:  API para aplicar um cupom de desconto.  
-**Endereços do Usuário**   
+- **Endereços do Usuário**   
   **POST /api/add-address**: API para adicionar um novo endereço de entrega para o usuário.  
   **DELETE /api/delete-address**: API para excluir um endereço de entrega do usuário.  
-**Pedidos**  
+- **Pedidos**  
   **POST /api/process-order**: API para processar um novo pedido de compra no e-commerce.  
 
 ## Entre em contato
@@ -106,23 +106,23 @@ This project is an e-commerce platform developed for the fictional company Byte8
   - **/routes**: API routes  
 
 ## API's of the Project
-**User Authentication**  
+- **User Authentication**  
   **POST /register**: API to register a new user account in the e-commerce platform.  
   **POST /login**: API to log in a user in the e-commerce platform.  
   **GET /auth**: API to verify user authentication using JWT token.  
-**Products**  
+- **Products**  
   **GET /api/products**: API to access all available products in the e-commerce platform.  
-**Wishlist**  
+- **Wishlist**  
   **POST /api/save-product**: API to add a new product to the user's wishlist.  
   **DELETE /api/delete-product**: API to delete a product from the user's wishlist.  
   **GET /api/get-bag**: API to retrieve the current wishlist items of the user.  
   **PUT /api/refresh-bag**: API to update the quantity of a product in the user's wishlist.  
-**Coupons**  
+- **Coupons**  
   **POST /api/cupom**: API to apply a discount coupon.  
-**User Addresses**  
+- **User Addresses**  
   **POST /api/add-address**: API to add a new shipping address for the user.  
   **DELETE /api/delete-address**: API to delete a shipping address of the user.  
-**Orders**    
+- **Orders**    
   **POST /api/process-order**: API to process a new order in the e-commerce platform.  
 
 ## Contact me
