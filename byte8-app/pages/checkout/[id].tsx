@@ -2,13 +2,13 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import env from "../../env";
 import { useAuth } from "../../context/AuthContext";
-import NavBar from "@/app/components/navbar";
-import styles from "@/app/styles/checkout.module.css"
+import NavBar from "../../src/app/components/navbar"
+import styles from  "../../src/app/styles/checkout.module.css"
 import Image from "next/image";
 import axios from "axios";
 import Cookies from "js-cookie";
-import Footer from "@/app/components/footer";
-import PopUp from "@/app/components/popup";
+import Footer from  "../../src/app/components/footer"
+import PopUp from "../../src/app/components/popup"
 
 
 // IMAGES IMPORTS

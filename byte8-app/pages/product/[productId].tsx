@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "@/app/styles/productDetail.module.css"
+import styles from  "../../src/app/styles/productDetail.module.css"
 import { useRouter } from "next/router";
 import axios from "axios";
 import env from "../../env";
@@ -12,10 +12,10 @@ import Stock from "../../public/imgs/Stock.png"
 import bagIcon from "../../public/imgs/bag-icon.png"
 
 // IMPORT COMPONENTS
-import NavBar from "@/app/components/navbar";
-import Footer from "@/app/components/footer";
+import NavBar from  "../../src/app/components/navbar";
+import Footer from  "../../src/app/components/footer"
 import { useAuth } from "../../context/AuthContext";
-import PopUp from "@/app/components/popup";
+import PopUp from  "../../src/app/components/popup"
 
 
 export default function Product () {
