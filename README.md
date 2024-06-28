@@ -45,23 +45,23 @@ Este projeto é um e-commerce desenvolvido para a empresa fictícia Byte8, utili
   - **/models**: Modelos dos dados do MongoDB  
   - **/routes**: Rotas da API  
  
-## API's do Projeto
-  # Autenticação do Usuário  
-    **POST /register**: API para registrar uma nova conta de usuário no e-commerce.  
-    **POST /login**: API para realizar login de usuário no e-commerce.  
-    **GET /auth**: API para verificar a autenticação do usuário utilizando token JWT.  
-  # Produtos  
-    **GET /api/products**: API para acessar todos os produtos disponíveis no e-commerce.  
-  # Sacola de Desejos  
-    **POST /api/save-product**: API para adicionar um novo produto na Sacola de Desejos do usuário.  
-    **DELETE /api/delete-product**: API para excluir produto da Sacola de Desejos do usuário.  
-    **GET /api/get-bag**:  API para obter a sacola de desejos atual do usuário.  
-    **PUT /api/refresh-bag**: API para atualizar a quantidade do produto na Sacola de Desejos do usuário.  
-  # Cupons  
-    **POST /api/cupom**:  API para aplicar um cupom de desconto.  
-  # Endereços do Usuário  
-    **POST /api/add-address**: API para adicionar um novo endereço de entrega para o usuário.  
-    **DELETE /api/delete-address**: API para excluir um endereço de entrega do usuário.  
-  # Pedidos  
-    **POST /api/process-order**: API para processar um novo pedido de compra no e-commerce.  
+# API's do Projeto
+## Autenticação do Usuário  
+  **POST /register**: API para registrar uma nova conta de usuário no e-commerce.  
+  **POST /login**: API para realizar login de usuário no e-commerce.  
+  **GET /auth**: API para verificar a autenticação do usuário utilizando token JWT.  
+## Produtos  
+  **GET /api/products**: API para acessar todos os produtos disponíveis no e-commerce.  
+## Sacola de Desejos  
+  **POST /api/save-product**: API para adicionar um novo produto na Sacola de Desejos do usuário.  
+  **DELETE /api/delete-product**: API para excluir produto da Sacola de Desejos do usuário.  
+  **GET /api/get-bag**:  API para obter a sacola de desejos atual do usuário.  
+  **PUT /api/refresh-bag**: API para atualizar a quantidade do produto na Sacola de Desejos do usuário.  
+## Cupons  
+  **POST /api/cupom**:  API para aplicar um cupom de desconto.  
+## Endereços do Usuário  
+  **POST /api/add-address**: API para adicionar um novo endereço de entrega para o usuário.  
+  **DELETE /api/delete-address**: API para excluir um endereço de entrega do usuário.  
+## Pedidos  
+  **POST /api/process-order**: API para processar um novo pedido de compra no e-commerce.  
 
