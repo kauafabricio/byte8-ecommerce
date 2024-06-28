@@ -14,6 +14,8 @@ const Footer = () => {
         </picture>
         <p>&copy; 2024 Byte8. Todos os direitos reservados.</p>
         <p>Desenvolvido por Kauã Fabrício.</p>
+        <p>Imagens fornecidas por Freepik: <a href="https://www.freepik.com">www.freepik.com</a></p>
+        <p>Família de Icons: <a href="https://phosphoricons.com/">Phosphor Icons</a></p>
       </div>
       <div className={styles.footerMiniBox}>
         <h1>Assistência aos clientes</h1>

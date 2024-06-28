@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AuthProvider>
       <Head>
-        <link rel="icon" href="/imgs/favicon.ico" />
+        <link rel="icon" href="/imgs/logo.png" />
       </Head>
       <Component {...pageProps} />
     </AuthProvider>
