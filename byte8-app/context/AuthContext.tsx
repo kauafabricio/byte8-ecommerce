@@ -22,17 +22,26 @@ export interface UserAddress {
   country: string;
 }
 
+interface OrderItem {
+  productId: string;
+  productName: string;
+  quantity: number;
+  individualPrice: number;
+  totalPrice: number;
+  productImg: string;
+}
+
 interface UserOrder {
   userId: string;
   orderNumber: number;
   orderDate: Date;
-  shippingAddress: Object;
+  shippingAddress: UserAddress;
   paymentMethod: string;
   totalAmount: number;
   status: string;
   shippingCost: number;
   discountAmount: number;
-  items: Object;
+  items: OrderItem[];
   trackingNumber: number;
 }
 
