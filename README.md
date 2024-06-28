@@ -1,8 +1,6 @@
 # Byte8 E-commerce Project
-
 ## Live Application
 https://byte8.vercel.app/  
-
 ## Vídeo sobre o projeto
 https://www.youtube.com/watch?v=8vI0CqfYXw4  
 
