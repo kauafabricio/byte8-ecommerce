@@ -2,7 +2,7 @@
 ## Live Application
 https://byte8.vercel.app/  
 ## Vídeo sobre o projeto
-https://www.youtube.com/watch?v=8vI0CqfYXw4  
+[Watch Video](https://www.youtube.com/watch?v=8vI0CqfYXw4)
 
 ## Sobre o projeto
 
@@ -63,3 +63,67 @@ Este projeto é um e-commerce desenvolvido para a empresa fictícia Byte8, utili
 ## Pedidos  
   **POST /api/process-order**: API para processar um novo pedido de compra no e-commerce.  
 
+# Entre em contato
+**Linkedin**: https://www.linkedin.com/in/dev-kaua/  
+
+## About the Project
+
+This project is an e-commerce platform developed for the fictional company Byte8, using TypeScript, Next.js, Node.js, Express.js, Mongoose, and JWT (JSON Web Tokens). The main goal is to provide an online shopping platform with essential features such as account registration, login, cart management, order checkout, and coupon application.
+
+## Key Features
+
+**User Authentication**: Secure registration and login using JWT for managing user sessions.  
+**Product Management**: Add products to the cart, remove items, and view product details.  
+**Simplified Checkout**: Streamlined checkout process with basic user information and order total.  
+**Coupon Application**: Ability to apply discount coupons during checkout.  
+**Order History**: Access to previous orders for user reference.
+
+## Technologies Used
+
+**Frontend**: Next.js, React, TypeScript, ContextAPI.  
+**Backend**: Node.js, Express.js, Mongoose, JWT, Bcrypt.  
+**Database**: MongoDB with Mongoose for data modeling.  
+**Authentication**: JWT for token-based authentication.
+
+## Folder Structure
+
+**Client-side**  
+
+- **/byte8-app**: Root folder of the front-end application  
+    - **/context**: Global state management files using ContextAPI  
+    - **/public**: Media files such as images and fonts  
+    - **/pages**: Application page files  
+    - **/src**: Component directory and CSS files of the application  
+       - **/app**:  
+         - **/components**: Application components  
+         - **/styles**: Application CSS files  
+
+**Server-side**
+
+- **/byte8-server**: Root folder of the back-end application  
+  - **/controllers**: Route control functions  
+  - **/models**: MongoDB data models  
+  - **/routes**: API routes  
+
+# API's of the Project
+## User Authentication  
+  **POST /register**: API to register a new user account in the e-commerce platform.  
+  **POST /login**: API to log in a user in the e-commerce platform.  
+  **GET /auth**: API to verify user authentication using JWT token.  
+## Products  
+  **GET /api/products**: API to access all available products in the e-commerce platform.  
+## Wishlist  
+  **POST /api/save-product**: API to add a new product to the user's wishlist.  
+  **DELETE /api/delete-product**: API to delete a product from the user's wishlist.  
+  **GET /api/get-bag**: API to retrieve the current wishlist items of the user.  
+  **PUT /api/refresh-bag**: API to update the quantity of a product in the user's wishlist.  
+## Coupons  
+  **POST /api/cupom**: API to apply a discount coupon.  
+## User Addresses  
+  **POST /api/add-address**: API to add a new shipping address for the user.  
+  **DELETE /api/delete-address**: API to delete a shipping address of the user.  
+## Orders  
+  **POST /api/process-order**: API to process a new order in the e-commerce platform.  
+
+# Contact me
+**Linkedin**: https://www.linkedin.com/in/dev-kaua/
