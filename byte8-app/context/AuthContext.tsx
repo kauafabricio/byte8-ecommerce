@@ -3,21 +3,50 @@ import Cookies from 'js-cookie';
 import axios from 'axios';
 import env from '../env.js';
 
-interface User {
-  name: string;
+interface ProductBag {
+  productId: string;
+  productName: string;
+  productImg: string;
+  productPrice: number;
+  productQuantity: number;
+}
+
+export interface UserAddress {
+  _id: string;
+  streetAddress: string;
+  complement: string;
+  neighborhood: string;
+  city: string;
+  state: string;
+  postalCode: number;
+  country: string;
+}
+
+interface UserOrder {
+  userId: string;
+  orderNumber: number;
+  orderDate: Date;
+  shippingAddress: Object;
+  paymentMethod: string;
+  totalAmount: number;
+  status: string;
+  shippingCost: number;
+  discountAmount: number;
+  items: Object;
+  trackingNumber: number;
 }
 
 interface AuthContextType {
-  user: User | null;
-  setUser: (user: User | null) => void;
+  user: string | null | undefined;
+  setUser: (user: string | null | undefined) => void;
   userId: string;
   setUserId: (id: string) => void;
-  userBag: Array<Object>;
-  setUserBag: (bag: Array<Object>) => void;
-  userAddress: Array<Object>;
-  setUserAddress: (list: Array<Object>) => void;
-  userOrders: Array<Object>;
-  setUserOrders: (list: Array<Object>) => void;
+  userBag: ProductBag[];
+  setUserBag: (bag: ProductBag[]) => void;
+  userAddress: UserAddress[];
+  setUserAddress: (list: UserAddress[]) => void;
+  userOrders: UserOrder[];
+  setUserOrders: (list: UserOrder[]) => void;
   fetchBagData: () => void;
   isLogged: boolean;
   setIsLogged: (isLogged: boolean) => void;
@@ -32,12 +61,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   });
 
 
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<string | null | undefined>(null);
   const [isLogged, setIsLogged] = useState<boolean>(false)
-  const [userId, setUserId] = useState('');
-  const [userBag, setUserBag] = useState<Array<Object>>([])
-  const [userAddress, setUserAddress] = useState<Array<Object>>([])
-  const [userOrders, setUserOrders] = useState<Array<Object>>([])
+  const [userId, setUserId] = useState<string>('');
+  const [userBag, setUserBag] = useState<ProductBag[]>([])
+  const [userAddress, setUserAddress] = useState<UserAddress[]>([])
+  const [userOrders, setUserOrders] = useState<UserOrder[]>([])
 
   const fetchBagData = useCallback(async () => {
     if (userId) {

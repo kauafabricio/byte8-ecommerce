@@ -17,6 +17,33 @@ import Footer from  "../../src/app/components/footer"
 import { useAuth } from "../../context/AuthContext";
 import PopUp from  "../../src/app/components/popup"
 
+// TYPES
+
+interface ProductDetails {
+  prodScreenSize?: string;
+  prodCPU?: string;
+  prodCPUCores?: number;
+  prodMainCam?: string;
+  prodFrontCam?: string;
+  prodBattery?: string;
+  prodHeight?: string;
+  prodWidth?: string;
+  prodCapacity?: string;
+  prodRAM?: string;
+  prodStorage?: string;
+  prodOS?: string;
+  prodConnectionTechnology?: string;
+}
+interface Product {
+  _id: string,
+  prodName: string;
+  prodPrice: number;
+  prodCategory: string;
+  prodImg: string;
+  prodUnits: number;
+  prodDetail: string;
+  details: ProductDetails;
+}
 
 export default function Product () {
   const api = axios.create({
@@ -24,7 +51,30 @@ export default function Product () {
   })
   const router = useRouter();
   const { productId } = router.query;
-  const [product, setProduct] = useState<Object>({})
+  const [product, setProduct] = useState<Product>({
+    _id: '',
+    prodName: '',
+    prodPrice: 0,
+    prodCategory: '',
+    prodImg: '',
+    prodUnits: 0,
+    prodDetail: '',
+    details: {
+      prodScreenSize: '',
+      prodCPU: '',
+      prodCPUCores: 0,
+      prodMainCam: '',
+      prodFrontCam: '',
+      prodBattery: '',
+      prodHeight: '',
+      prodWidth: '',
+      prodCapacity: '',
+      prodRAM: '',
+      prodStorage: '',
+      prodOS: '',
+      prodConnectionTechnology: ''
+    }
+  })
   const { fetchBagData, isLogged, userId } = useAuth();
 
   // POPUP STATES

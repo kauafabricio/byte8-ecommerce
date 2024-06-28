@@ -16,6 +16,15 @@ import PopUp from "../../src/app/components/popup"
 import creditCard from "../../public/imgs/credit-card.png"
 import Head from "next/head";
 
+// TYPES
+import { UserAddress } from "../../context/AuthContext";
+interface Cupom {
+  code: string;
+  quantity: number;
+  discount: number;
+  expire: Date;
+}
+
 export default function Checkout() {
 
   const api = axios.create({
@@ -58,7 +67,12 @@ export default function Checkout() {
   }, [fetchBagDataCallback])
 
   // CUPOM STATES
-  const [userCupom, setUserCupom] = useState<Object>({})
+  const [userCupom, setUserCupom] = useState<Cupom>({
+    code: '',
+    quantity: 0,
+    discount: 0,
+    expire: new Date()
+  });
   const [cupom, setCupom] = useState('')
 
   // INTERFACE STATES
@@ -81,7 +95,16 @@ export default function Checkout() {
 
   // ADDRESS STATES
   
-  const [selectedAddress, setSelectedAddress] = useState<number | null>(null)
+  const [selectedAddress, setSelectedAddress] = useState<UserAddress>({
+    _id: '',
+    streetAddress: '',
+    complement: '',
+    neighborhood: '',
+    city: '',
+    state: '',
+    postalCode: 0,
+    country: ''
+  })
   const [formAddress, setFormAddress] = useState<boolean>(false)
   const [streetAddressForm, setStreetAddressForm] = useState<string>('')
   const [complementForm, setComplementForm] = useState<string>('')
@@ -96,10 +119,10 @@ export default function Checkout() {
 
   // PAYMENT STATES
 
-  const [cardHolder, setCardHolder] = useState('')
-  const [cardNumber, setCardNumber] = useState<number | null>(null)
-  const [cardDateExp, setCardDateExp] = useState<Date | null>(null)
-  const [cardCVV, setCardCVV] = useState<number | null>(null)
+  const [cardHolder, setCardHolder] = useState<string>('')
+  const [cardNumber, setCardNumber] = useState<number | "">("")
+  const [cardDateExp, setCardDateExp] = useState<Date | "">("")
+  const [cardCVV, setCardCVV] = useState<number | "">("")
 
   // SYSTEM CODE
 
@@ -156,7 +179,7 @@ export default function Checkout() {
     }
   }
 
-  const totalCheckout = userBag.reduce((total, product): any => {
+  const totalCheckout = userBag.reduce((total: number, product): number => {
     return total + (product.productPrice * product.productQuantity);
   }, 0);
 
@@ -199,8 +222,9 @@ export default function Checkout() {
 
   const payOrder = () => {
     if (userId) {
-      console.log(userBag)
-      if (cardNumber.length == 16 && cardCVV.length == 3) {
+      const cardNumberStr = cardNumber.toString()
+      const cardCVVStr = cardCVV.toString()
+      if (cardNumberStr.length === 16 && cardCVVStr.length === 3) {
         const finishPayment = async () => {
           try {
             const totalPrice = totalWithCupom();
@@ -382,6 +406,17 @@ export default function Checkout() {
 
     return () => clearTimeout(hideTimer);
   }, [showPopUp]);
+
+  const handleDateChange = (value: string) => {
+    if (value === "") {
+      setCardDateExp("");
+    } else {
+      const date = new Date(value);
+      if (!isNaN(date.getTime())) {
+        setCardDateExp(date);
+      }
+    }
+  };
 
   return(
     <>
@@ -651,10 +686,31 @@ export default function Checkout() {
 
               <form action="POST">
                 <input value={cardHolder} onChange={(e) => setCardHolder(e.target.value)} type="text" placeholder="Titular do cartão" required/>
-                <input value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} type="number" placeholder="Número do cartão" required/>
+                <input
+                  value={cardNumber === "" ? "" : cardNumber}
+                  onChange={(e) => setCardNumber(e.target.value === "" ? "" : Number(e.target.value))}
+                  type="number"
+                  placeholder="Número do cartão"
+                  required
+                />
                 <div>
-                  <input value={cardDateExp} onChange={(e) => setCardDateExp(e.target.value)} type="date" placeholder="Data de Expiração" required/>
-                  <input value={cardCVV} onChange={(e) => setCardCVV(e.target.value)} type="number" placeholder="CVV" required/>
+                <input
+                  value={cardDateExp === "" ? "" : cardDateExp.toISOString().substring(0, 10)}
+                  onChange={(e) => handleDateChange(e.target.value)}
+                  type="date"
+                  placeholder="Data de Expiração"
+                  required
+                />
+                  <input
+                    value={cardCVV === "" ? "" : cardCVV}
+                    onChange={(e) => {
+                      const value = e.target.value;
+                      setCardCVV(value === "" ? "" : Number(value));
+                    }}
+                    type="number"
+                    placeholder="CVV"
+                    required
+                  />
                 </div>
               </form>
             </div>

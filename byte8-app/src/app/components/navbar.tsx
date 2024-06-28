@@ -87,6 +87,10 @@ const NavBar= () => {
     window.location.href = `${env.urlFront}/`
   }
 
+  const getFirstName = (nickname: string | null | undefined) => {
+    return nickname?.split(' ')[0] ?? null;
+  };
+
   return (
     <>
     <nav className={styles.navBar}>
@@ -173,7 +177,7 @@ const NavBar= () => {
 
       {flyoutOn && flyoutContent === 'user' && isLogged &&
         <div className={styles.userFlyout}>
-          <h1>Olá, { user ? user.split(' ')[0] : null}</h1>
+          <h1>Olá, { user ? getFirstName(user) : null}</h1>
           <hr></hr>
           <div className={styles.userOptionsFlyout}>
             <Link href={`${env.urlFront}/orders`}>

@@ -3,7 +3,7 @@ import mongoose from "mongoose"
 // User Model
 const productSchema = mongoose.Schema({
   prodName: { type: String, required: true },
-  prodPrice: { type: String, required: true },
+  prodPrice: { type: Number, required: true },
   prodCategory: { type: String, required: true },
   prodImg: { type: String, required: true },
   prodUnits: { type: Number, required: true },
