@@ -1,6 +1,6 @@
 const env = {
-  urlFront: 'http://localhost:3000',
-  urlServer: 'http://localhost:5000'
+  urlFront: 'https://byte8.vercel.app/',
+  urlServer: 'https://byte8-server.vercel.app/'
 }
 
 export default env;
