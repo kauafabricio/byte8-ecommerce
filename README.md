@@ -2,7 +2,7 @@
 ## Live Application
 https://byte8.vercel.app/  
 ## Vídeo sobre o projeto
-[Watch Video](https://www.youtube.com/watch?v=8vI0CqfYXw4)
+[Watch Video](https://youtu.be/WJXbQZvfLyg?si=aS5XbgQ10okXnXMt)
 
 ## Sobre o projeto
 
