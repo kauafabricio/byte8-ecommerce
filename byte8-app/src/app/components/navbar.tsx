@@ -117,13 +117,13 @@ const NavBar= () => {
       </div>
 
       <div className={styles.navIcons}>
-          <button onClick={showBag}>
+          <button aria-label="Abrir Sacola de Desejos" onClick={showBag}>
             <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="#ddd" viewBox="0 0 256 256"><path d="M216,68H172V64a44,44,0,0,0-88,0v4H40A12,12,0,0,0,28,80V200a12,12,0,0,0,12,12H216a12,12,0,0,0,12-12V80A12,12,0,0,0,216,68ZM92,64a36,36,0,0,1,72,0v4H92ZM220,200a4,4,0,0,1-4,4H40a4,4,0,0,1-4-4V80a4,4,0,0,1,4-4H84V96a4,4,0,0,0,8,0V76h72V96a4,4,0,0,0,8,0V76h44a4,4,0,0,1,4,4Z"></path></svg>
           </button>
-          <button onClick={showUser}>
+          <button aria-label="Abrir Área do Usuário" onClick={showUser}>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ddd" viewBox="0 0 256 256"><path d="M128,28A100,100,0,1,0,228,128,100.11,100.11,0,0,0,128,28ZM68.87,198.42a68,68,0,0,1,118.26,0,91.8,91.8,0,0,1-118.26,0Zm124.3-5.55a75.61,75.61,0,0,0-44.51-34,44,44,0,1,0-41.32,0,75.61,75.61,0,0,0-44.51,34,92,92,0,1,1,130.34,0ZM128,156a36,36,0,1,1,36-36A36,36,0,0,1,128,156Z"></path></svg>
           </button>
-          <button className={styles.menuIcon} onClick={showMenu}>
+          <button aria-label="Abrir menu" className={styles.menuIcon} onClick={showMenu}>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" viewBox="0 0 256 256"><path d="M220,128a4,4,0,0,1-4,4H40a4,4,0,0,1,0-8H216A4,4,0,0,1,220,128ZM40,68H216a4,4,0,0,0,0-8H40a4,4,0,0,0,0,8ZM216,188H40a4,4,0,0,0,0,8H216a4,4,0,0,0,0-8Z"></path></svg>
           </button>
 
@@ -189,7 +189,7 @@ const NavBar= () => {
               </Link>
 
             <div>
-              <button onClick={logout}><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ffffff" viewBox="0 0 256 256"><path d="M128,28A100,100,0,1,0,228,128,100.11,100.11,0,0,0,128,28ZM68.87,198.42a68,68,0,0,1,118.26,0,91.8,91.8,0,0,1-118.26,0Zm124.3-5.55a75.61,75.61,0,0,0-44.51-34,44,44,0,1,0-41.32,0,75.61,75.61,0,0,0-44.51,34,92,92,0,1,1,130.34,0ZM128,156a36,36,0,1,1,36-36A36,36,0,0,1,128,156Z"></path></svg> Sair</button>
+              <button aria-label="Sair da conta" onClick={logout}><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ffffff" viewBox="0 0 256 256"><path d="M128,28A100,100,0,1,0,228,128,100.11,100.11,0,0,0,128,28ZM68.87,198.42a68,68,0,0,1,118.26,0,91.8,91.8,0,0,1-118.26,0Zm124.3-5.55a75.61,75.61,0,0,0-44.51-34,44,44,0,1,0-41.32,0,75.61,75.61,0,0,0-44.51,34,92,92,0,1,1,130.34,0ZM128,156a36,36,0,1,1,36-36A36,36,0,0,1,128,156Z"></path></svg> Sair</button>
               </div>
           </div>
         </div>
@@ -208,7 +208,7 @@ const NavBar= () => {
                     <p>R$ {product.productPrice},00</p>
                   </div>
                 </div>
-                <button onClick={() => deleteProductOnBag(product.productName)}>
+                <button aria-label="Deletar produto da sacola" onClick={() => deleteProductOnBag(product.productName)}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ffffff" viewBox="0 0 256 256"><path d="M216,52H172V40a20,20,0,0,0-20-20H104A20,20,0,0,0,84,40V52H40a4,4,0,0,0,0,8H52V208a12,12,0,0,0,12,12H192a12,12,0,0,0,12-12V60h12a4,4,0,0,0,0-8ZM92,40a12,12,0,0,1,12-12h48a12,12,0,0,1,12,12V52H92ZM196,208a4,4,0,0,1-4,4H64a4,4,0,0,1-4-4V60H196ZM108,104v64a4,4,0,0,1-8,0V104a4,4,0,0,1,8,0Zm48,0v64a4,4,0,0,1-8,0V104a4,4,0,0,1,8,0Z"></path></svg>
                </button>
               </div>
