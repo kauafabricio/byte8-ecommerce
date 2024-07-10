@@ -5,11 +5,11 @@ import env from "../env.js"
 import Head from "next/head.js";
 
 // IMAGES IMPORTS
-import smartwatchPng from "../public/imgs/byte8-smartwatch8pro-black.png";
-import headsetPng from "../public/imgs/byte8-pulse8withmic.png";
-import bytePhone from "../public/imgs/byte8-bytephone8.png";
-import laptop from "../public/imgs/byte8-notepro8.png";
-import headsetSectionImg from "../public/imgs/byte8-bytesound8.png"
+import smartwatchPng from "../public/imgs/byte8-smartwatch8pro-black.webp";
+import headsetPng from "../public/imgs/byte8-pulse8withmic.webp";
+import bytePhone from "../public/imgs/byte8-bytephone8.webp";
+import laptop from "../public/imgs/byte8-notepro8.webp";
+import headsetSectionImg from "../public/imgs/byte8-bytesound8.webp"
 import deliveryIcon from "../public/imgs/delivery-truck.png"
 import cardDeliveryIcon from "../public/imgs/card-delivery.png"
 import starCheckIcon from "../public/imgs/star-check.png"

@@ -166,7 +166,7 @@
   width: 100%;
   padding: 4rem 5rem;
   display: flex;
-  background: url(../../../public/imgs/grainy-texture-background.jpg) rgb(0, 0, 0, 0.7);
+  background: url(../../../public/imgs/grainy-texture-background.webp) rgb(0, 0, 0, 0.7);
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
@@ -226,7 +226,7 @@
   display: flex;
   width: 100%;
   padding: 5rem 2rem;
-  background: url(../../../public/imgs/black-background.jpg) rgb(0,0,0,0.4);
+  background: url(../../../public/imgs/black-background.webp) rgb(0,0,0,0.4);
   background-blend-mode: multiply;
   background-position: center;
   background-attachment: fixed;

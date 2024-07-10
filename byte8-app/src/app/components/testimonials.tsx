@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 // IMAGES IMPORTS
 
-import abstractForm from "../../../public/imgs/abstract-form-1.png"
-import abstractForm2 from "../../../public/imgs/abstract-form-2.png"
+import abstractForm from "../../../public/imgs/abstract-form-1.webp"
+import abstractForm2 from "../../../public/imgs/abstract-form-2.webp"
 import ana from "../../../public/imgs/ana-mazarotti.png"
 import livia from "../../../public/imgs/livia.png"
 import roberto from "../../../public/imgs/roberto.png"
